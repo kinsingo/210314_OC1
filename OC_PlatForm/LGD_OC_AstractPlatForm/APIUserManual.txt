@@ -1,0 +1,12 @@
+--public--
+0. [enum] Enums
+1. [interface] Imeasurement (the user need to implement it's subclass)
+2. [interface] ICommuinication (the user need to implement it's subclass)
+3. [interface] IBusinessAPI (the user need to select which API option to use (ConsoleAPI or WinFormAPI)
+4. [class] ConsoleAPI : IBusinessAPI
+5. [class] WinFormAPI : IBusinessAPI <-- usually use this one.
+6. [class] CompensationFacade
+
+
+
+

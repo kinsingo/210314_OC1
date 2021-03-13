@@ -1,0 +1,8 @@
+func.key auto
+model.name AOD_IN
+############## AOD in ############################
+
+mipi.write 0x15 0xFF 0x10
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x05 0x39
+delay 120

@@ -1,0 +1,22 @@
+﻿빌드 시작: 2019-06-18 오전 10:04:53
+     1>2 노드의 "D:\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_1906017_Offset_Study_Vreg1_Algorithm\CPP_BSQH_dll_MR_Shin\BSQH_dll_MR_Shin\BSQH_dll_MR_Shin.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\BSQH_dll_MR_Shin.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         모든 출력이 최신 상태입니다.
+         모든 출력이 최신 상태입니다.
+         모든 출력이 최신 상태입니다.
+       ManifestResourceCompile:
+         모든 출력이 최신 상태입니다.
+       Link:
+         모든 출력이 최신 상태입니다.
+       Manifest:
+         모든 출력이 최신 상태입니다.
+       FinalizeBuildStatus:
+         "Debug\BSQH_dll_MR_Shin.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Debug\BSQH_dll_MR_Shin.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"D:\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_1906017_Offset_Study_Vreg1_Algorithm\CPP_BSQH_dll_MR_Shin\BSQH_dll_MR_Shin\BSQH_dll_MR_Shin.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.11

@@ -1,0 +1,192 @@
+#==============================================================================
+#    ____________
+#   /            \
+#  /___________    \     Display Toolkit    : A15/A16
+# |             \   \    Firmware           : v2.3.8
+# |     PEOPLE    \ /    DCl Commmand       :
+# |       &        |
+# |     CHIPS     /      Date Last Modified : 2019/03/18 v0.4
+# |_____________/        Date Created       : 
+# |       |   |
+# |       |  /           Display Module     : DP116 / Huawei
+# |       | /            D-IC               : NT37280
+# |_______|/             Resolution         : 1,176 x 2,400
+#
+# Revision History :
+# v0.4 : DP116_V0.4_V3-3
+# -> TI PMIC 용 DDVDH, VSSEL setting 추가
+# ACC setting 제거
+#==============================================================================
+
+func.key play
+model.name DP116_V0.4_TI_V3-3
+#==============================================================================================================
+# 1. Power Off Sequence & A15 Inistial Condition
+#==============================================================================================================
+
+power.off all
+gpio.disable
+mipi.video.disable
+dvi.video.disable
+
+#==============================================================================================================
+# 2. Power-On Sequence
+#==============================================================================================================
+mipi.host.reset		# LP00
+delay 100
+
+# ----------------------------------------------------------------
+# GPIO[7] GPIO[6] GPIO[5] GPIO[4] GPIO[3] GPIO[2] GPIO[1] GPIO[0]
+# ----------------------------------------------------------------
+# TE      -       -       -       -       -       -       RESX
+# IN      OUT     OUT     OUT     OUT     OUT     OUT     OUT
+# ----------------------------------------------------------------
+
+gpio.write 0x00		# TP_RST=RESX=LOW
+gpio.dir 0x7F
+gpio.enable
+delay 100
+
+# ----------------------------------------------------------------
+# No.     | PWR8   PWR7   PWR6        PWR3   PWR2   PWR1
+# ----------------------------------------------------------------
+# A15-STD | VPP    VBAT   AUX         VCC    VDD    VIO
+# F2      | -      VBAT   -           VDD    VCI    VDDI
+# Level   | -      3.8V   -           -      3.1V   1.85V
+# ----------------------------------------------------------------
+
+power.vio.level 1.85	# VDDI
+power.vpp.level 6.0     # VDDD Enable
+power.vdd.level 3.1	# VCI
+power.vbat.level 3.8	# VBAT
+
+
+power.on vbat		# VBAT
+delay 100
+power.on vio		# VDDI on
+delay 2
+power.on vpp          # VDDD on
+delay 2     
+power.on vdd		# VCI on
+delay 5
+mipi.lane.enable	# LP11
+delay 5
+
+gpio.write 0x01		# RESX=HIGH
+delay 1
+gpio.write 0x00		# RESX=Low
+delay 1
+gpio.write 0x01		# RESX=HIGH
+delay 10
+
+#==============================================================================================================
+# 3. DSC Configurations
+#==============================================================================================================
+# Auto-generated script. (Don't edit followings manually)
+
+spi.write 0x00 0x0001	# PAGE 1
+
+spi.write 0x21 0x0000
+spi.write 0x22 0x0008
+spi.write 0x23 0x0001
+spi.write 0x24 0x0960
+spi.write 0x25 0x0498
+spi.write 0x26 0x0010
+spi.write 0x27 0x024C
+spi.write 0x28 0x024C
+spi.write 0x29 0x0200
+spi.write 0x2A 0x0226
+spi.write 0x2B 0x0020
+spi.write 0x2C 0x0194
+spi.write 0x2D 0x0008
+spi.write 0x2E 0x000C
+spi.write 0x2F 0x0667
+spi.write 0x30 0x05D7
+spi.write 0x31 0x1800
+spi.write 0x32 0x10F0
+spi.write 0x33 0x030C
+
+spi.write 0x20 0x0101	# DSC ENCODER EN, SLICE NUM : 20
+spi.write 0x00 0x0000	# PAGE 0
+
+#==============================================================================================================
+# 4. MIPI Configurations
+#==============================================================================================================
+mipi.mode twin
+
+#          VACT HACT FPS VBP VFP HBP HFP VSA HSA 
+mipi.video 2400 1176 60  2   8  60  60   2   4
+
+mipi.dsi 4 900 command dsc frc
+			
+
+					
+spi.write 0x80 0x0553	# FPS Control (Equation = 10^8 / FPS / VTOTAL) with frc									
+spi.write 0x85 0x02A0	# FPS Control (Equation = 10^8 / FPS / VTOTAL)		
+				
+#==============================================================================================================
+# 5. Module Initialization
+#==============================================================================================================
+
+
+#PPS Table 1
+
+mipi.write 0x0A 0x11 0x00 0x00 0x89 0x30 0x80 0x09 0x60 0x04 0x98 0x00 0x10 0x02 0x4C 0x02 0x4C	0x02 0x00 0x02 0x26 0x00 0x20 0x01 0x94 0x00 0x08 0x00 0x0C 0x06 0x67 0x05 0xD7 0x18 0x00 0x10 0xF0 0x03 0x0C 0x20 0x00 0x06 0x0B 0x0B 0x33 0x0E 0x1C 0x2A 0x38 0x46 0x54 0x62 0x69 0x70 0x77 0x79 0x7B 0x7D 0x7E 0x01 0x02 0x01 0x00 0x09 0x40 0x09 0xBE 0x19 0xFC 0x19 0xFA 0x19 0xF8 0x1A 0x38 0x1A 0x78 0x1A 0xB6 0x2A 0xF6 0x2B 0x34 0x2B 0x74 0x3B 0x74 0x6B 0xF4 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00				
+delay 1
+
+
+#==============================================================================================================
+# 5.1 MCS
+#==============================================================================================================
+
+#==============================================================================================================
+# 5.2 UCS
+#==============================================================================================================
+
+#################### 190327 TI PMIC 용 추가 ####################
+mipi.write 0x15 0xFF 0x20
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x15 0x77 0x1A	
+mipi.write 0x15 0x7A 0x1A	# AVDD = 7.6V
+mipi.write 0x15 0x81 0x1A	# AoD in AVDD = 7.6V
+mipi.write 0x15 0x82 0x1A	# AoD out AVDD = 7.6V
+mipi.write 0x15 0x83 0x1A	# AoD in AVDD = 7.6V
+mipi.write 0x15 0x84 0x1A	# AoD out AVDD = 7.6V
+################################################################
+
+mipi.write 0x15 0xFF 0x10
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x39 0x2A 0x00 0x00 0x04 0x97
+mipi.write 0x39 0x2B 0x00 0x00 0x09 0x5F
+mipi.write 0x15 0x35 0x00
+mipi.write 0x15 0x66 0x01	#190327 v0.7 VSSEL set2 사용
+
+mipi.write 0x15 0x7E 0xFC	#Normal IRC On, ACC on
+mipi.write 0x15 0x7F 0x06	#Normal PPA on
+mipi.write 0x15 0x80 0x03	#Normal IRC On, ACC on
+mipi.write 0x15 0x81 0x01	#Normal PPA on
+mipi.write 0x15 0x82 0x10	#Normal Simple PPA on
+mipi.write 0x15 0x88 0x07	#AoD PPA Off
+mipi.write 0x15 0x8A 0x00	#AoD PPA Off
+
+mipi.write 0x39 0x51 0x0C 0x4B #Normal 1
+mipi.write 0x15 0x6C 0x1E	#1P2 non-loading @ aod
+mipi.write 0x15 0xE9 0x00
+mipi.write 0x15 0xBF 0x03	# AoD 압축 NVT (01 : NVS SDC 3x / 03 : VESA DSC 3x)
+mipi.write 0x15 0xC0 0x03	# Normal 압축 NVT (01 : NVS SDC 3x / 03: VESA DSC 3x)
+
+mipi.write 0x05 0x11 # Sleep out
+delay 120
+
+#delay 10
+
+#==============================================================================================================
+# 6. MIPI Tx Start & Display On
+#==============================================================================================================
+image.red
+image.white
+delay 100
+#dvi.video.enable
+mipi.video.enable
+delay 100
+mipi.write 0x05 0x29 # Display on

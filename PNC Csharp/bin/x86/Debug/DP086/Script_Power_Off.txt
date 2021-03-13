@@ -1,0 +1,29 @@
+#=======================================================
+# Script Key Assignment
+#=======================================================
+func.key stop
+model.name DP086-v01
+#=======================================================
+# Power Off Sequence & A15 Initial Condition
+#=======================================================
+
+mipi.write 0x15 0xFF 0x10  #CMD1/0
+
+mipi.write 0x05 0x28
+mipi.write 0x05 0x10
+delay 100
+
+mipi.video.disable   # LP11
+delay 10
+gpio.write 0x00      # TP_RST=RESX=Low
+delay 10
+
+power.off vdd	      # VCI off
+delay 2
+power.off vpp        # VDDD off
+delay 2
+power.off vio	      # VDDI off
+delay 2
+
+delay 100
+mipi.host.reset      # LP00

@@ -1,0 +1,2 @@
+#Go to HFR 60Hz
+mipi.write 0x15 0x76 0x00

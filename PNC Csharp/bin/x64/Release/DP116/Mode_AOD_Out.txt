@@ -1,0 +1,9 @@
+func.key NONE
+model.name NONE
+
+############## AOD out ##########################
+
+mipi.write 0x15 0xFF 0x10
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x05 0x38
+delay 90

@@ -1,0 +1,32 @@
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC Csharp.csproj.ResolveComReference.cache
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC Csharp.csprojResolveAssemblyReference.cache
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\App.baml
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\MainWindow.baml
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\App.g.cs
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\MainWindow.g.cs
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC Csharp_MarkupCompile.cache
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC Csharp.g.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.BMP_Image_Processing_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.CPP_Dll_Test_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.DP150_Dual_Engineering_Mornitoring_Mode.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.DP150_Single_Engineerig_Mornitoring_Mode.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Dual_Engineer_Monitoring_Mode.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Dual_SH_Delta_E.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Engineer_Mornitoring_Mode.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.First_Model_Option_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Form1.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Keysight_Oscilloscope_DSOX_4104A.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Meta_Engineer_Mornitoring_Mode.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Meta_Model_Option_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.MIPI_CMD_Ctrl_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.OC_Verify_Show_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Optic_Measurement_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.OTP_Read_and_Compare.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.PNC_10ch_Board_Ctrl.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Properties.Resources.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.Second_Model_Option_Form.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC_Csharp.SH_Delta_E.resources
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_191126\PNC Csharp\obj\Debug\PNC Csharp.csproj.GenerateResource.Cache
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200309\PNC Csharp\obj\Debug\PNC Csharp.csproj.ResolveComReference.cache
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200605_PM2\PNC Csharp\obj\Debug\PNC Csharp.csproj.ResolveComReference.cache
+E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200810\PNC Csharp\obj\Debug\PNC Csharp.csproj.ResolveComReference.cache

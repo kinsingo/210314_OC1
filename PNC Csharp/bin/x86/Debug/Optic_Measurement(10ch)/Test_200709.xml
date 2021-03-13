@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Multi_CH_Measurement_Preferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Saved_Date>2020.07.09 08:37:30</Saved_Date>
+  <check_PNC_CH>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </check_PNC_CH>
+  <CA_NO_CH>
+    <string>1</string>
+    <string>2</string>
+    <string>3</string>
+    <string>4</string>
+    <string>5</string>
+    <string>6</string>
+    <string>7</string>
+    <string>8</string>
+    <string>9</string>
+    <string>10</string>
+  </CA_NO_CH>
+  <Set_Change_Delay>150</Set_Change_Delay>
+  <check_SET>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </check_SET>
+  <SEQ_SET>
+    <string>1</string>
+    <string>2</string>
+    <string>3</string>
+    <string>4</string>
+    <string>5</string>
+    <string>6</string>
+  </SEQ_SET>
+  <textBox_Script_SET>
+    <string>mipi.write 0x15 0x76 0x00</string>
+    <string>mipi.write 0x15 0x76 0x01</string>
+    <string>mipi.write 0x15 0x76 0x02</string>
+    <string>mipi.write 0x15 0x76 0x03</string>
+    <string>mipi.write 0x15 0x76 0x04</string>
+    <string>mipi.write 0x15 0x76 0x05</string>
+  </textBox_Script_SET>
+  <check_GCS_DBV>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+  </check_GCS_DBV>
+  <GCS_DBV>
+    <string>FFF</string>
+    <string>DD6</string>
+    <string>C59</string>
+    <string>ADC</string>
+    <string>9D8</string>
+    <string>8D4</string>
+    <string>7C2</string>
+    <string>70C</string>
+    <string>656</string>
+    <string>5E2</string>
+    <string>56E</string>
+    <string>4B8</string>
+    <string>402</string>
+    <string>362</string>
+    <string>2C2</string>
+    <string>22B</string>
+    <string>194</string>
+    <string>12E</string>
+    <string>0C8</string>
+    <string>001</string>
+  </GCS_DBV>
+  <GCS_Delay>150</GCS_Delay>
+  <GCS_min_gray>0</GCS_min_gray>
+  <GCS_max_gray>255</GCS_max_gray>
+  <GCS_step>1</GCS_step>
+  <GCS_Min_to_Max>false</GCS_Min_to_Max>
+  <GCS_Max_to_Min>true</GCS_Max_to_Min>
+  <check_BCS_Gray>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </check_BCS_Gray>
+  <BCS_Gray>
+    <string>255</string>
+    <string>223</string>
+    <string>191</string>
+    <string>159</string>
+    <string>127</string>
+    <string>111</string>
+    <string>95</string>
+    <string>79</string>
+    <string>63</string>
+    <string>55</string>
+    <string>47</string>
+    <string>39</string>
+    <string>31</string>
+    <string>27</string>
+    <string>23</string>
+    <string>19</string>
+    <string>15</string>
+    <string />
+    <string />
+    <string />
+  </BCS_Gray>
+  <BCS_Range1>true</BCS_Range1>
+  <BCS_Range2>false</BCS_Range2>
+  <BCS_Range3>false</BCS_Range3>
+  <BCS_Delay>150</BCS_Delay>
+  <BCS_Range1_min_DBV>1</BCS_Range1_min_DBV>
+  <BCS_Range1_max_DBV>4095</BCS_Range1_max_DBV>
+  <BCS_Range1_step>1</BCS_Range1_step>
+  <BCS_Range2_min_DBV>1</BCS_Range2_min_DBV>
+  <BCS_Range2_max_DBV>2047</BCS_Range2_max_DBV>
+  <BCS_Range2_step>1</BCS_Range2_step>
+  <BCS_Range3_min_DBV>1</BCS_Range3_min_DBV>
+  <BCS_Range3_max_DBV>2047</BCS_Range3_max_DBV>
+  <BCS_Range3_step>1</BCS_Range3_step>
+  <BCS_Min_to_Max>false</BCS_Min_to_Max>
+  <BCS_Max_to_Min>true</BCS_Max_to_Min>
+  <check_Gamma_Crush>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </check_Gamma_Crush>
+  <Gamma_Crush_DBV>
+    <string>7FF</string>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </Gamma_Crush_DBV>
+  <Gamma_Crush_Gray>
+    <string>10</string>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </Gamma_Crush_Gray>
+  <Gamma_Crush_PTN_Delay>150</Gamma_Crush_PTN_Delay>
+  <Gamma_Crush_DBV_Delay>150</Gamma_Crush_DBV_Delay>
+  <checkBox_Gamma_Crush_W>true</checkBox_Gamma_Crush_W>
+  <checkBox_Gamma_Crush_R>true</checkBox_Gamma_Crush_R>
+  <checkBox_Gamma_Crush_G>true</checkBox_Gamma_Crush_G>
+  <checkBox_Gamma_Crush_B>true</checkBox_Gamma_Crush_B>
+  <check_AOD_GCS_DBV>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </check_AOD_GCS_DBV>
+  <AOD_GCS_DBV>
+    <string>7FF</string>
+    <string />
+    <string />
+  </AOD_GCS_DBV>
+  <AOD_GCS_Delay>150</AOD_GCS_Delay>
+  <AOD_CODE_Delay>150</AOD_CODE_Delay>
+  <AOD_GCS_min_gray>0</AOD_GCS_min_gray>
+  <AOD_GCS_max_gray>255</AOD_GCS_max_gray>
+  <AOD_GCS_step>1</AOD_GCS_step>
+  <AOD_GCS_Min_to_Max>false</AOD_GCS_Min_to_Max>
+  <AOD_GCS_Max_to_Min>true</AOD_GCS_Max_to_Min>
+  <IR_Drop_DeltaE_DBV>DD6</IR_Drop_DeltaE_DBV>
+  <IR_Drop_DeltaE_Delay>150</IR_Drop_DeltaE_Delay>
+  <IR_Drop_DeltaE_Set>1</IR_Drop_DeltaE_Set>
+  <textBox_Aging_Time>30</textBox_Aging_Time>
+  <textBox_Aging_DBV>FFF</textBox_Aging_DBV>
+  <check_GCS_Measure>false</check_GCS_Measure>
+  <check_BCS_Measure>true</check_BCS_Measure>
+  <check_AOD_GCS_Measure>false</check_AOD_GCS_Measure>
+  <check_IR_Drop_DeltaE_Measure>true</check_IR_Drop_DeltaE_Measure>
+  <check_Gamma_Crush_Measure>false</check_Gamma_Crush_Measure>
+  <check_Avg_Measure>false</check_Avg_Measure>
+  <textBox_Avg_Lv_Limit>0.06</textBox_Avg_Lv_Limit>
+  <CA_CH_W>3</CA_CH_W>
+  <CA_CH_R>3</CA_CH_R>
+  <CA_CH_G>3</CA_CH_G>
+  <CA_CH_B>3</CA_CH_B>
+  <All_Color_CH_fix>true</All_Color_CH_fix>
+</Multi_CH_Measurement_Preferences>

@@ -1,0 +1,51 @@
+﻿Build started 2020-04-02 오전 12:07:25.
+     1>Project "E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Dll_Implement_Test\Dll_Implement_Test.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\Dll_Implement_Test.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\Dll_Implement_Test.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\Dll_Implement_Test.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BSQH_dll_MR_Shin.cpp BSQH_MR_SHIN_Algorithm.cpp Data_Structures.cpp Dll_Implement_Test.cpp DP173_Initial_Fast_OC_Related.cpp Meta_Initial_Fast_OC_Related.cpp OC_Weights.cpp Optic_Compensation.cpp SJH_Matrix.cpp
+         BSQH_dll_MR_Shin.cpp
+         BSQH_MR_SHIN_Algorithm.cpp
+     1>BSQH_MR_SHIN_Algorithm.cpp(695): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 'strcpy' 선언을 참조하십시오.
+         Data_Structures.cpp
+         Dll_Implement_Test.cpp
+         DP173_Initial_Fast_OC_Related.cpp
+     1>DP173_Initial_Fast_OC_Related.cpp(418): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(436): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(456): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(714): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(829): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(847): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(867): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(1126): warning C4244: 'return' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>DP173_Initial_Fast_OC_Related.cpp(1130): warning C4244: 'return' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         Meta_Initial_Fast_OC_Related.cpp
+         OC_Weights.cpp
+         Optic_Compensation.cpp
+         SJH_Matrix.cpp
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Dll_Implement_Test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.lib" /MACHINE:X86 Release\BSQH_dll_MR_Shin.obj
+         Release\BSQH_MR_SHIN_Algorithm.obj
+         Release\Data_Structures.obj
+         Release\Dll_Implement_Test.obj
+         Release\DP173_Initial_Fast_OC_Related.obj
+         Release\Meta_Initial_Fast_OC_Related.obj
+         Release\OC_Weights.obj
+         Release\Optic_Compensation.obj
+         Release\SJH_Matrix.obj
+         Release\stdafx.obj
+            E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.lib 라이브러리 및 E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.exp 개체를 생성하고 있습니다.
+         코드를 생성하고 있습니다.
+         코드를 생성했습니다.
+         Dll_Implement_Test.vcxproj -> E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Release\Dll_Implement_Test.exe;#1" /manifest Release\Dll_Implement_Test.exe.intermediate.manifest
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(562,5): error MSB6006: "mt.exe" exited with code -1073740791.
+     1>Done Building Project "E:\Shinjonghyun_746294\SJH_GB_PNC_C++_BSQH(DP116 and All_Model_platform)\BSQH_Program_MR_Shin_All_Model_200401\Dll_Implement_Test\Dll_Implement_Test\Dll_Implement_Test.vcxproj" (build target(s)) -- FAILED.
+
+빌드하지 못했습니다.
+
+Time Elapsed 00:00:22.96

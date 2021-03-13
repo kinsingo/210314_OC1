@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OC_Abstraction_PlatForm_WinForm_Test_Dll", "OC_Abstraction_PlatForm_WinForm_Test_Dll\OC_Abstraction_PlatForm_WinForm_Test_Dll.csproj", "{EB61EB38-119E-4249-ABDE-573E0E1A3404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB61EB38-119E-4249-ABDE-573E0E1A3404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB61EB38-119E-4249-ABDE-573E0E1A3404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB61EB38-119E-4249-ABDE-573E0E1A3404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB61EB38-119E-4249-ABDE-573E0E1A3404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B929018-F310-443D-89E2-24DE9D73826B}
+	EndGlobalSection
+EndGlobal

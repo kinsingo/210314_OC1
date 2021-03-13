@@ -1,0 +1,7 @@
+﻿  BSQH_MR_SHIN_Algorithm.cpp
+BSQH_MR_SHIN_Algorithm.cpp(688): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 'strcpy' 선언을 참조하십시오.
+     E:\Shinjonghyun_746294\SJH_GB_PNC_BSQH\BSQH_Program_MR_Shin_All_Model_200113\CPP_BSQH_dll_MR_Shin\Make_Dll\Release\BSQH_dll_MR_Shin.lib 라이브러리 및 E:\Shinjonghyun_746294\SJH_GB_PNC_BSQH\BSQH_Program_MR_Shin_All_Model_200113\CPP_BSQH_dll_MR_Shin\Make_Dll\Release\BSQH_dll_MR_Shin.exp 개체를 생성하고 있습니다.
+  코드를 생성하고 있습니다.
+  코드를 생성했습니다.
+  BSQH_dll_MR_Shin.vcxproj -> E:\Shinjonghyun_746294\SJH_GB_PNC_BSQH\BSQH_Program_MR_Shin_All_Model_200113\CPP_BSQH_dll_MR_Shin\Make_Dll\Release\BSQH_dll_MR_Shin.dll

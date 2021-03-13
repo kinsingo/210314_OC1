@@ -1,0 +1,243 @@
+#==============================================================================
+#    ____________
+#   /            \
+#  /___________    \     Display Toolkit    : A15/A16
+# |             \   \    Firmware           : v2.3.6
+# |     PEOPLE    \ /    DCl Commmand       :
+# |       &        |
+# |     CHIPS     /      Date Last Modified : 2018/07/20 
+# |_____________/        Date Created       : 2018/07/20
+# |       |   |
+# |       |  /           Display Module     : DP086 / Huawei
+# |       | /            D-IC               : NT37280
+# |_______|/             Resolution         : 1,080 x 2,340 / DSC (Profile 8)
+#
+# Revision History :
+# v0.1 : Initial code_Novakey
+#==============================================================================
+
+func.key play
+model.name DP086-v01
+#=======================================================
+# 1. Power Off Sequence & A15 Initial Condition
+#=======================================================
+
+
+mipi.write 0x15 0xFF 0x10  #CMD1/0
+mipi.write 0x05 0x28
+delay 20
+mipi.write 0x05 0x10
+delay 80
+
+
+
+delay 10
+gpio.write 0x00      # TP_RST=RESX=Low
+delay 10
+
+power.off vdd	      # VCI off
+delay 2
+power.off vpp        # VDDD off
+delay 2
+power.off vio	      # VDDI off
+delay 2
+
+#=======================================================
+# 2. Power-On Sequence
+#=======================================================
+mipi.host.reset		# LP00
+delay 100
+
+# ----------------------------------------------------------------
+# GPIO[7] GPIO[6] GPIO[5] GPIO[4] GPIO[3] GPIO[2] GPIO[1] GPIO[0]
+# ----------------------------------------------------------------
+# TE      -       -       TP_CLK   -      TP_CS   TP_RST  RESX
+# IN      OUT     OUT     OUT     OUT     OUT     OUT     OUT
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# GPIO[15] GPIO[14] GPIO[13] GPIO[12] GPIO[11] GPIO[10] GPIO[9] GPIO[8]
+# ----------------------------------------------------------------
+#    -       -      TP_MISO   TP_MOSI   LED      LED      LED     LED
+#   OUT     OUT     IN        OUT       OUT      OUT      OUT     OUT
+# ----------------------------------------------------------------
+
+gpio.write 0x00		# TP_RST=RESX=LOW
+gpio.dir 0x7F
+gpio.enable
+delay 100
+
+# ----------------------------------------------------------------
+# No.     | PWR8   PWR7   PWR6        PWR3   PWR2   PWR1
+# ----------------------------------------------------------------
+# A15-STD | VPP    VBAT   AUX         VCC    VDD    VIO
+# DP086   | VDDD   VBAT   TP_VDDIN   TP_VDDIO VCI    VDDI
+# Level   | 1.18V  3.8V   3.3V        1.85V   3.1V   1.85V
+# -------------------------------------------------------------
+
+power.vio.level 1.85	# VDDI
+power.vpp.level 6.0     # VDDD Enable
+power.vdd.level 3.1	# VCI
+power.vbat.level 3.8	# VBAT
+
+
+power.on vbat		# VBAT
+delay 100
+
+power.on vio		# VDDI on
+delay 2
+power.on vpp          # VDDD on
+delay 2     
+power.on vdd		# VCI on
+delay 5
+mipi.lane.enable	# LP11
+delay 5
+gpio.write 0x03		# TP_RST=RESX=HIGH
+delay 1
+gpio.write 0x00		# TP_RST=RESX=Low
+delay 1
+gpio.write 0x03		# TP_RST=RESX=HIGH
+delay 10
+
+#=======================================================
+# 3. DSC Configurations
+#=======================================================
+# N/A
+
+#=======================================================
+# 4. MIPI Configurations
+#=======================================================
+mipi.mode twin
+
+#          VACT HACT FPS VBP VFP HBP HFP VSA HSA
+mipi.video 2340 1080 60  32   8  20  20   4   4
+
+mipi.dsi 4 1100 command #frc # te # 1time#frc te#1time #frc # te #1time #te # 1time #frc 1time te
+spi.write 0x3C 0x30A0
+			
+spi.write 0x34 0x0808
+spi.write 0x66 0x0711
+spi.write 0x67 0x0725
+spi.write 0x68 0x1002
+spi.write 0x69 0x0A0A
+spi.write 0x6C 0x0F0F
+					
+spi.write 0x80 0x0576	# FPS Control (Equation = 10^8 / FPS / VTOTAL) with frc									
+spi.write 0x85 0x02BB	# FPS Control (Equation = 10^8 / FPS / VTOTAL)	
+spi.write 0x81 0x0950	#VTOTAL (VSA+VBP+VACT+VFP=2384)					
+spi.write 0x86 0x0950	
+				
+#=======================================================
+# 5. Module Initialization
+#=======================================================
+
+#=======================================================
+# 5.1 MCS
+#=======================================================
+
+
+
+mipi.write 0x15 0xFF 0xE0      ############### page 3
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x15 0x18 0x80
+mipi.write 0x15 0x1A 0x15
+mipi.write 0x15 0x73 0x01
+mipi.write 0x15 0x89 0x01
+mipi.write 0x15 0x0D 0xDD
+###mipi.write 0x15 0x46 0x15    ## adjust gamma op driving
+mipi.write 0x15 0x28 0x03  # cut1 default : 0x00 cut2 : 0x00
+
+
+
+#################### VDD interal voltage 1.16 ->1.04
+
+mipi.write 0x15 0xFF 0x20
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x15 0x34 0x00
+mipi.write 0x15 0x35 0x06 #1.16-0.12V 1.16
+mipi.write 0x15 0x36 0x66 #-0.12V 1.16
+mipi.write 0x15 0x7D 0x85
+
+#### Disable Flash Auto Reload
+mipi.write 0x15 0x48 0x01
+######################################################
+
+
+#=======================================================
+# 5.2 UCS
+#=======================================================
+
+mipi.write 0x15 0xFF 0x10
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x39 0x2A 0x00 0x00 0x04 0x37
+mipi.write 0x39 0x2B 0x00 0x00 0x09 0x23
+mipi.write 0x15 0x35 0x00
+mipi.write 0x39 0x51 0x0F 0xE1
+mipi.write 0x15 0x6C 0x1E  # IP2 non-loading @ aod
+
+# IRC on
+mipi.write 0x15 0x7E 0xFE  # IRC on
+mipi.write 0x15 0x7F 0x07
+mipi.write 0x15 0x80 0x01  # IRC on
+mipi.write 0x15 0x81 0x00
+mipi.write 0x15 0x82 0x00
+
+# IRC +ERA on
+#mipi.write 0x15 0x7E 0xFE  # IRC on
+#mipi.write 0x15 0x7F 0x03  # ERA on
+#mipi.write 0x15 0x80 0x01  # IRC on
+#mipi.write 0x15 0x81 0x0C  # ERA on
+#mipi.write 0x15 0x82 0x00
+
+## All off
+#mipi.write 0x15 0x7E 0xFF ## HDR_bypass, CM_bypass, CPC_bypass, ASE_bypass, APLC_bypass, DPC_bypass, ABC_bypass,   IRC_bypass
+#mipi.write 0x15 0x7F 0x07 ##  -, -, -, -, -,                                           CURVE_bypass, DGGMA_bypass, PPA_bypass
+#mipi.write 0x15 0x80 0x00 ## HDR_on,      CM_on,    CPC_on,     ASE_on,     APLC_on,     DPC_on,     ABC_on,        IRC_on
+#mipi.write 0x15 0x81 0x00 ## -, -, -, -,                                    CURVE2_on, CURVE_on,     DGGMA_on,      PPA_on
+#mipi.write 0x39 0x82 0x00 ## -, -, -,                         PPA_Simple_En, PPA_CROSS_ODD_Line, PPA_PNL_Mode, PPA_Green_First, PPA_Green_Top 
+
+mipi.write 0x15 0x88 0x07
+mipi.write 0x15 0xE9 0x00
+mipi.write 0x15 0xBF 0x00
+mipi.write 0x15 0xC0 0x00
+
+mipi.write 0x15 0xFF 0x20
+mipi.write 0x15 0xFB 0x00
+
+mipi.write 0x15 0x4F 0x05 #OTP1 Sel
+#mipi.write 0x15 0x4F 0x0A #OTP2 Sel
+#mipi.write 0x15 0x4F 0x0F #OTP3 Sel
+#mipi.write 0x15 0x4F 0x00 #LAST OTP Sel
+delay 120
+
+mipi.write 0x15 0xFF 0x10
+mipi.write 0x15 0xFB 0x01
+mipi.write 0x05 0x11
+
+delay 120
+
+
+#=======================================================
+# 6. MIPI Tx Start & Display On
+#=======================================================
+image.white
+#image.gray 3
+delay 100
+#dvi.video.enable
+mipi.video.enable
+
+delay 100
+
+mipi.write 0x05 0x29 # Display on
+
+
+#### CMD2_P0 #######
+mipi.write 0x15 0xFF 0x20
+mipi.write 0x15 0xFB 0x01
+
+mipi.write 0x15 0x7D 0x85
+
+mipi.write 0x15 0xFF 0x10    # 58 Ack ok.. 0 
+mipi.write 0x15 0xFB 0x01    # 59 Ack ok.. 0 
+mipi.write 0x39 0x51 0x07 0xD5   #  60 Ack ok.. 0 
+
+

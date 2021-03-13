@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C39ED9C9-DB1B-43C3-80B7-BE75C6994279}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LGD_OC_AstractPlatForm</RootNamespace>
+    <AssemblyName>LGD_OC_AstractPlatForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonAPI\ConsoleAPI.cs" />
+    <Compile Include="CommonAPI\IBusinessAPI.cs" />
+    <Compile Include="CommonAPI\ICommunication.cs" />
+    <Compile Include="CommonAPI\Imeasurement.cs" />
+    <Compile Include="CommonAPI\WinFormAPI.cs" />
+    <Compile Include="Enums\Compensation.cs" />
+    <Compile Include="Enums\Model.cs" />
+    <Compile Include="Log\DP213Log.cs" />
+    <Compile Include="Log\Temp1.cs" />
+    <Compile Include="Log\Temp2.cs" />
+    <Compile Include="Log\Temp3.cs" />
+    <Compile Include="OCSET\Temp4.cs" />
+    <Compile Include="OCSET\Temp5.cs" />
+    <Compile Include="OCSET\Temp6.cs" />
+    <Compile Include="OCSET\Temp7.cs" />
+    <Compile Include="OCSET\Temp8.cs" />
+    <Compile Include="OpticCompensation\AODCompensation\DP213_AODCompensation.cs" />
+    <Compile Include="OpticCompensation\AODCompensation\DP253_AODCompensation.cs" />
+    <Compile Include="OpticCompensation\AODCompensation\Meta_AODCompensation.cs" />
+    <Compile Include="OpticCompensation\BlackCompensation\DP213_BlackCompensation.cs" />
+    <Compile Include="OpticCompensation\BlackCompensation\DP253_BlackCompensation.cs" />
+    <Compile Include="OpticCompensation\BlackCompensation\Meta_BlackCompensation.cs" />
+    <Compile Include="OpticCompensation\CompensationFacade.cs" />
+    <Compile Include="OpticCompensation\ELVSSCompensation\DP213_ELVSSCompensation.cs" />
+    <Compile Include="OpticCompensation\ELVSSCompensation\DP253_ELVSSCompensation.cs" />
+    <Compile Include="OpticCompensation\ELVSSCompensation\Meta_ELVSSCompensation.cs" />
+    <Compile Include="OpticCompensation\GrayLowReferenceCompensation\DP213_GrayLowRefCompensation.cs" />
+    <Compile Include="OpticCompensation\GrayLowReferenceCompensation\DP253_GrayLowRefCompensation.cs" />
+    <Compile Include="OpticCompensation\GrayLowReferenceCompensation\Meta_GrayLowRefCompensation.cs" />
+    <Compile Include="OpticCompensation\ICompensation.cs" />
+    <Compile Include="OpticCompensation\MainCompensation\DP213_MainCompensation.cs" />
+    <Compile Include="OpticCompensation\MainCompensation\DP253_MainCompensation.cs" />
+    <Compile Include="OpticCompensation\MainCompensation\Meta_MainCompensation.cs" />
+    <Compile Include="OpticCompensation\OCFactory.cs" />
+    <Compile Include="OpticCompensation\WhiteCompensation\DP213_WhiteCompensation.cs" />
+    <Compile Include="OpticCompensation\WhiteCompensation\DP253_WhiteCompensation.cs" />
+    <Compile Include="OpticCompensation\WhiteCompensation\Meta_WhiteCompensation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

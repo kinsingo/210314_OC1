@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Measurement_UserPreferences xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Saved_Date>2021.03.04 15:49:38</Saved_Date>
+  <textBox_Mipi_Script_Condition1>mipi.write 0x15 0x76 0x00 </textBox_Mipi_Script_Condition1>
+  <textBox_Mipi_Script_Condition2>mipi.write 0x15 0x76 0x01</textBox_Mipi_Script_Condition2>
+  <textBox_Mipi_Script_Condition3>mipi.write 0x15 0x76 0x02</textBox_Mipi_Script_Condition3>
+  <textBox_Show_Compared_Mipi_Data>mipi.write 0x15 0x76 0x00 
+</textBox_Show_Compared_Mipi_Data>
+  <textBox_Show_Compared_Mipi_Data2>mipi.write 0x15 0x76 0x01 
+</textBox_Show_Compared_Mipi_Data2>
+  <textBox_Show_Compared_Mipi_Data3>mipi.write 0x15 0x76 0x02 
+</textBox_Show_Compared_Mipi_Data3>
+  <textBox_delay_After_Condition_1>20</textBox_delay_After_Condition_1>
+  <textBox_delay_After_Condition_2>20</textBox_delay_After_Condition_2>
+  <textBox_delay_After_Condition_3>20</textBox_delay_After_Condition_3>
+  <textBox_Aging_Sec>5</textBox_Aging_Sec>
+  <textBox_Delta_E2_End_Point>38</textBox_Delta_E2_End_Point>
+  <textBox_Delta_E2_Max_Point>1000</textBox_Delta_E2_Max_Point>
+  <textBox_delay_time_E2>300</textBox_delay_time_E2>
+  <checkBox_1st_Condition_Measure_E2>true</checkBox_1st_Condition_Measure_E2>
+  <checkBox_2nd_Condition_Measure_E2>false</checkBox_2nd_Condition_Measure_E2>
+  <checkBox_3rd_Condition_Measure_E2>false</checkBox_3rd_Condition_Measure_E2>
+  <checkBox_White_PTN_Apply_E2>true</checkBox_White_PTN_Apply_E2>
+  <step_value_1>true</step_value_1>
+  <step_value_4>false</step_value_4>
+  <step_value_8>false</step_value_8>
+  <step_value_16>false</step_value_16>
+  <radioButton_Min_to_Max_E2>false</radioButton_Min_to_Max_E2>
+  <radioButton_Max_to_Min_E2>true</radioButton_Max_to_Min_E2>
+  <textBox_Condition1>
+    <string>5FF</string>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </textBox_Condition1>
+  <textBox_Condition2>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </textBox_Condition2>
+  <textBox_Condition3>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </textBox_Condition3>
+  <textBox_Delta_E_End_Point>38</textBox_Delta_E_End_Point>
+  <textBox_delay_time>300</textBox_delay_time>
+  <checkBox_3rd_Condition_Measure>false</checkBox_3rd_Condition_Measure>
+  <checkBox_2nd_Condition_Measure>false</checkBox_2nd_Condition_Measure>
+  <checkBox_1st_Condition_Measure>true</checkBox_1st_Condition_Measure>
+  <checkBox_Condition1>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </checkBox_Condition1>
+  <checkBox_Condition2>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </checkBox_Condition2>
+  <checkBox_Condition3>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </checkBox_Condition3>
+  <radioButton_Max_to_Min_E3>true</radioButton_Max_to_Min_E3>
+  <radioButton_Min_to_Max_E3>false</radioButton_Min_to_Max_E3>
+  <textBox_GCS_Diff_Min_Point>50</textBox_GCS_Diff_Min_Point>
+  <textBox_GCS_Diff_Max_Point>230</textBox_GCS_Diff_Max_Point>
+  <textBox_delay_time_Diff>300</textBox_delay_time_Diff>
+  <textBox_Diff>
+    <string>6FF</string>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </textBox_Diff>
+  <checkBox_Diff>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </checkBox_Diff>
+  <radioButton_Diff_1st_and_3rd>false</radioButton_Diff_1st_and_3rd>
+  <radioButton_Diff_2nd_and_3rd>false</radioButton_Diff_2nd_and_3rd>
+  <radioButton_Diff_1st_and_2nd>false</radioButton_Diff_1st_and_2nd>
+  <radioButton_Diff_1st_2nd_3rd>true</radioButton_Diff_1st_2nd_3rd>
+  <radioButton_SH_Diff_Step_16>false</radioButton_SH_Diff_Step_16>
+  <radioButton_SH_Diff_Step_8>false</radioButton_SH_Diff_Step_8>
+  <radioButton_SH_Diff_Step_4>true</radioButton_SH_Diff_Step_4>
+  <textBox_delay_time_Diff_BCS>300</textBox_delay_time_Diff_BCS>
+  <textBox_BCS_Diff_Gray_Points>
+    <string>255</string>
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+    <string />
+  </textBox_BCS_Diff_Gray_Points>
+  <textBox_BCS_Diff_Sub_1_Min_Point>1</textBox_BCS_Diff_Sub_1_Min_Point>
+  <textBox_BCS_Diff_Sub_2_Min_Point>1000</textBox_BCS_Diff_Sub_2_Min_Point>
+  <textBox_BCS_Diff_Sub_3_Min_Point>2000</textBox_BCS_Diff_Sub_3_Min_Point>
+  <textBox_BCS_Diff_Sub_1_Max_Point>100</textBox_BCS_Diff_Sub_1_Max_Point>
+  <textBox_BCS_Diff_Sub_2_Max_Point>1100</textBox_BCS_Diff_Sub_2_Max_Point>
+  <textBox_BCS_Diff_Sub_3_Max_Point>2047</textBox_BCS_Diff_Sub_3_Max_Point>
+  <CheckBox_BCS_Diff_Gray_Points>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+  </CheckBox_BCS_Diff_Gray_Points>
+  <BCS_Diff_step_value_1_Range1>false</BCS_Diff_step_value_1_Range1>
+  <BCS_Diff_step_value_4_Range1>true</BCS_Diff_step_value_4_Range1>
+  <BCS_Diff_step_value_8_Range1>false</BCS_Diff_step_value_8_Range1>
+  <BCS_Diff_step_value_16_Range1>false</BCS_Diff_step_value_16_Range1>
+  <BCS_Diff_step_value_1_Range2>false</BCS_Diff_step_value_1_Range2>
+  <BCS_Diff_step_value_4_Range2>false</BCS_Diff_step_value_4_Range2>
+  <BCS_Diff_step_value_8_Range2>true</BCS_Diff_step_value_8_Range2>
+  <BCS_Diff_step_value_16_Range2>false</BCS_Diff_step_value_16_Range2>
+  <BCS_Diff_step_value_1_Range3>false</BCS_Diff_step_value_1_Range3>
+  <BCS_Diff_step_value_4_Range3>false</BCS_Diff_step_value_4_Range3>
+  <BCS_Diff_step_value_8_Range3>false</BCS_Diff_step_value_8_Range3>
+  <BCS_Diff_step_value_16_Range3>true</BCS_Diff_step_value_16_Range3>
+  <radioButton_BCS_Diff_Single>false</radioButton_BCS_Diff_Single>
+  <radioButton_BCS_Diff_Dual>false</radioButton_BCS_Diff_Dual>
+  <radioButton_BCS_Diff_Triple>true</radioButton_BCS_Diff_Triple>
+  <checkBox_BCS_Diif_Range_1>true</checkBox_BCS_Diif_Range_1>
+  <checkBox_BCS_Diif_Range_2>true</checkBox_BCS_Diif_Range_2>
+  <checkBox_BCS_Diif_Range_3>true</checkBox_BCS_Diif_Range_3>
+  <checkBox_All_At_Once_E3>true</checkBox_All_At_Once_E3>
+  <checkBox_All_At_Once_E2>true</checkBox_All_At_Once_E2>
+  <checkBox_All_At_Once_Diff_BCS>true</checkBox_All_At_Once_Diff_BCS>
+  <checkBox_All_At_Once_AOD_GCS>true</checkBox_All_At_Once_AOD_GCS>
+  <checkBox_All_At_Once_Diff_GCS>true</checkBox_All_At_Once_Diff_GCS>
+  <checkBox_All_At_Once_Delta_E4>true</checkBox_All_At_Once_Delta_E4>
+  <textBox_AOD_DBV1>7FF</textBox_AOD_DBV1>
+  <textBox_AOD_DBV2>4FF</textBox_AOD_DBV2>
+  <textBox_AOD_DBV3>1FF</textBox_AOD_DBV3>
+  <textBox_AOD_DBV4>1FF</textBox_AOD_DBV4>
+  <textBox_AOD_DBV5>1FF</textBox_AOD_DBV5>
+  <textBox_AOD_DBV6>1FF</textBox_AOD_DBV6>
+  <checkBox_AOD_DBV1>true</checkBox_AOD_DBV1>
+  <checkBox_AOD_DBV2>false</checkBox_AOD_DBV2>
+  <checkBox_AOD_DBV3>false</checkBox_AOD_DBV3>
+  <checkBox_AOD_DBV4>false</checkBox_AOD_DBV4>
+  <checkBox_AOD_DBV5>false</checkBox_AOD_DBV5>
+  <checkBox_AOD_DBV6>false</checkBox_AOD_DBV6>
+  <checkBox_IR_Drop_DBV1>true</checkBox_IR_Drop_DBV1>
+  <checkBox_IR_Drop_DBV2>false</checkBox_IR_Drop_DBV2>
+  <radioButton_E4_50ea_PTNs>true</radioButton_E4_50ea_PTNs>
+  <radioButton_E4_94ea_PTNs>false</radioButton_E4_94ea_PTNs>
+  <radioButton_1st_Condition_Measure_E4>true</radioButton_1st_Condition_Measure_E4>
+  <radioButton_2nd_Condition_Measure_E4>false</radioButton_2nd_Condition_Measure_E4>
+  <radioButton_3rd_Condition_Measure_E4>false</radioButton_3rd_Condition_Measure_E4>
+  <textBox_IR_Drop_DBV1>7FF</textBox_IR_Drop_DBV1>
+  <textBox_IR_Drop_DBV2>4FF</textBox_IR_Drop_DBV2>
+  <textBox_delay_time_Delat_E4>300</textBox_delay_time_Delat_E4>
+  <radioButton_AverageMeasure_Meas_1times>false</radioButton_AverageMeasure_Meas_1times>
+  <radioButton_AverageMeasure_Meas_3times>false</radioButton_AverageMeasure_Meas_3times>
+  <radioButton_AverageMeasure_Meas_5times>true</radioButton_AverageMeasure_Meas_5times>
+  <textBox_AverageMeasure_Apply_Max_Lv>0.5</textBox_AverageMeasure_Apply_Max_Lv>
+  <textBox_AverageMeasure_Delay_Before_Measure>20</textBox_AverageMeasure_Delay_Before_Measure>
+</Measurement_UserPreferences>

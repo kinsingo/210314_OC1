@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28B89B59-F397-4933-934C-7D7B8FA932E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PNC_Csharp</RootNamespace>
+    <AssemblyName>PNC Csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BSQH_Csharp_Library">
+      <HintPath>bin\BSQH_Csharp_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="CASDK2Net, Version=1.0.6835.20865, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CASDK2Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CA200SRVRLib">
+      <HintPath>lib\Interop.CA200SRVRLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SectionLib">
+      <HintPath>lib\SectionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMP\BMP_Image_Processing_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMP\BMP_Image_Processing_Form.Designer.cs">
+      <DependentUpon>BMP_Image_Processing_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMP\BMP_Maker.cs" />
+    <Compile Include="BMP\ImageProcessing.cs" />
+    <Compile Include="BMP\FilterWeight.cs" />
+    <Compile Include="CA_Multi_Channels\CA_Multi_Channel_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA_Multi_Channels\CA_Multi_Channel_Form.Designer.cs">
+      <DependentUpon>CA_Multi_Channel_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA_Multi_Channels\GridView_Control.cs" />
+    <Compile Include="CA_Multi_Channels\Multi_CA310_Control.cs" />
+    <Compile Include="CA_Multi_Channels\Multi_CA410_Control.cs" />
+    <Compile Include="CA_Multi_Channels\Multi_CA_Control.cs" />
+    <Compile Include="DP150\DP150_uvL_Skip.cs" />
+    <Compile Include="DP213\DP213_Csharp_Imp_for_Cpp_Dll.cs" />
+    <Compile Include="DP213\DP213_ELVSS_Margin_Test.cs" />
+    <Compile Include="DP213\DP213_OC_Offset.cs" />
+    <Compile Include="DP213\DP213_OC_Values_Storage.cs" />
+    <Compile Include="DP213\SJHLogger.cs" />
+    <Compile Include="DP213\TargetSetting.cs" />
+    <Compile Include="Measurement_QA\All_At_Once.cs" />
+    <Compile Include="Measurement_QA\AOD_Delta_E3.cs" />
+    <Compile Include="Measurement_QA\AvgMeasMode.cs" />
+    <Compile Include="Measurement_QA\BaseMeasure.cs" />
+    <Compile Include="Measurement_QA\Base_Channel.cs" />
+    <Compile Include="Measurement_QA\BCS_Single_or_Difference.cs" />
+    <Compile Include="Measurement_QA\Delta_E2.cs" />
+    <Compile Include="Measurement_QA\Delta_E3.cs" />
+    <Compile Include="Measurement_QA\Delta_E4.cs" />
+    <Compile Include="Measurement_QA\GCS_Difference.cs" />
+    <Compile Include="Measurement_10ch\Folder_Control.cs" />
+    <Compile Include="Measurement_10ch\Multi_CH_Measurement_Preferences.cs" />
+    <Compile Include="Measurement_10ch\Optic_Measurement_10ch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement_10ch\Optic_Measurement_10ch.designer.cs">
+      <DependentUpon>Optic_Measurement_10ch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement_QA\I_Channel.cs" />
+    <Compile Include="Measurement_QA\Multi_Channel.cs" />
+    <Compile Include="Measurement_QA\PNC_Scirp.cs" />
+    <Compile Include="Measurement_QA\Single_Channel.cs" />
+    <Compile Include="Measurement_QA\SQLiteDB.cs" />
+    <Compile Include="Practices\Class_Extensions.cs" />
+    <Compile Include="CommonUse\Color_Coordinate.cs" />
+    <Compile Include="Practices\CPP_Dll_Test_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practices\CPP_Dll_Test_Form.Designer.cs">
+      <DependentUpon>CPP_Dll_Test_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement_Forms\DBV_Accuracy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement_Forms\DBV_Accuracy.Designer.cs">
+      <DependentUpon>DBV_Accuracy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP086 and DP116\DP086_or_DP116.cs" />
+    <Compile Include="DP150\DP150_Dual_Engineering_Mornitoring_Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP150\DP150_Dual_Engineering_Mornitoring_Mode.Designer.cs">
+      <DependentUpon>DP150_Dual_Engineering_Mornitoring_Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP150\DP150_Single_Engineerig_Mornitoring_Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP150\DP150_Single_Engineerig_Mornitoring_Mode.Designer.cs">
+      <DependentUpon>DP150_Single_Engineerig_Mornitoring_Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP213\DP213 CRC Check.cs" />
+    <Compile Include="DP173 and Elgin\DP173_Dual_Engineering_Mornitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP173 and Elgin\DP173_Dual_Engineering_Mornitoring.Designer.cs">
+      <DependentUpon>DP173_Dual_Engineering_Mornitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP173 and Elgin\DP173_Model_Option_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP173 and Elgin\DP173_Model_Option_Form.Designer.cs">
+      <DependentUpon>DP173_Model_Option_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP173 and Elgin\DP173_or_Elgin.cs" />
+    <Compile Include="DP173 and Elgin\DP173_Single_Engineering_Mornitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP173 and Elgin\DP173_Single_Engineering_Mornitoring.Designer.cs">
+      <DependentUpon>DP173_Single_Engineering_Mornitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP213\DP213.cs" />
+    <Compile Include="DP213\DP213_Calculating_Init_RGBVreg1_Algorithm.cs" />
+    <Compile Include="DP213\DP213_CMD_Send_Read_Update_Textbox.cs" />
+    <Compile Include="DP213\DP213_Dual_Engineering_Mornitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP213\DP213_Dual_Engineering_Mornitoring.Designer.cs">
+      <DependentUpon>DP213_Dual_Engineering_Mornitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP213\DP213_Dual_Engineer_Read_Datas.cs" />
+    <Compile Include="DP213\DP213_FlashMemory.cs" />
+    <Compile Include="DP213\DP213_Main_OC_Flow.cs" />
+    <Compile Include="DP213\DP213_Model_Option_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP213\DP213_Model_Option_Form.Designer.cs">
+      <DependentUpon>DP213_Model_Option_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP213\DP213_Script_Update.cs" />
+    <Compile Include="DP086 and DP116\Dual_Engineer_Monitoring_Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP086 and DP116\Dual_Engineer_Monitoring_Mode.Designer.cs">
+      <DependentUpon>Dual_Engineer_Monitoring_Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement_Forms\Dual_SH_Delta_E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement_Forms\Dual_SH_Delta_E.Designer.cs">
+      <DependentUpon>Dual_SH_Delta_E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP086 and DP116\Engineer_Mornitoring_Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP086 and DP116\Engineer_Mornitoring_Mode.Designer.cs">
+      <DependentUpon>Engineer_Mornitoring_Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUse\Excel_Control.cs" />
+    <Compile Include="BMP\FastBitmap.cs" />
+    <Compile Include="DP086 and DP116\First_Model_Option_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP086 and DP116\First_Model_Option_Form.Designer.cs">
+      <DependentUpon>First_Model_Option_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DP173 and Elgin\DP173_Initial_RGBVreg1_Calculation.cs" />
+    <Compile Include="Meta\Meta.cs" />
+    <Compile Include="CommonUse\Mipi_Script_Convertor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUse\Mipi_Script_Convertor.Designer.cs">
+      <DependentUpon>Mipi_Script_Convertor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUse\Mipi_Script_Related.cs" />
+    <Compile Include="All Model\Model_Selection.cs" />
+    <Compile Include="All Model\OC_Param_Loader.cs" />
+    <Compile Include="Practices\Graph.cs" />
+    <Compile Include="Practices\MaxHeap.cs" />
+    <Compile Include="Practices\MinHeap.cs" />
+    <Compile Include="Practices\Practice_Interfaces.cs" />
+    <Compile Include="CommonUse\Matrix.cs" />
+    <Compile Include="Meta\Meta_Engineer_Mornitoring_Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\Meta_Engineer_Mornitoring_Mode.Designer.cs">
+      <DependentUpon>Meta_Engineer_Mornitoring_Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\Meta_Model_Option_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\Meta_Model_Option_Form.Designer.cs">
+      <DependentUpon>Meta_Model_Option_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUse\MIPI_CMD_Ctrl_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUse\MIPI_CMD_Ctrl_Form.Designer.cs">
+      <DependentUpon>MIPI_CMD_Ctrl_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement_QA\Optic_Measurement_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement_QA\Optic_Measurement_Form.Designer.cs">
+      <DependentUpon>Optic_Measurement_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUse\OTP_Read_and_Compare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUse\OTP_Read_and_Compare.Designer.cs">
+      <DependentUpon>OTP_Read_and_Compare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUse\PNC_10ch_Board_Ctrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUse\PNC_10ch_Board_Ctrl.Designer.cs">
+      <DependentUpon>PNC_10ch_Board_Ctrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practices\Practice_Coding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practices\Practice_Coding.Designer.cs">
+      <DependentUpon>Practice_Coding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practices\PriorityQueue.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DP150\Second_Model_Option_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP150\Second_Model_Option_Form.Designer.cs">
+      <DependentUpon>Second_Model_Option_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement_Forms\SH_Delta_E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement_Forms\SH_Delta_E.Designer.cs">
+      <DependentUpon>SH_Delta_E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practices\Practice_Classes.cs" />
+    <Compile Include="CommonUse\SJH_Enums.cs" />
+    <Compile Include="CommonUse\Measurement_UserPreferences.cs" />
+    <EmbeddedResource Include="BMP\BMP_Image_Processing_Form.resx">
+      <DependentUpon>BMP_Image_Processing_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA_Multi_Channels\CA_Multi_Channel_Form.resx">
+      <DependentUpon>CA_Multi_Channel_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement_10ch\Optic_Measurement_10ch.resx">
+      <DependentUpon>Optic_Measurement_10ch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practices\CPP_Dll_Test_Form.resx">
+      <DependentUpon>CPP_Dll_Test_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement_Forms\DBV_Accuracy.resx">
+      <DependentUpon>DBV_Accuracy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP150\DP150_Dual_Engineering_Mornitoring_Mode.resx">
+      <DependentUpon>DP150_Dual_Engineering_Mornitoring_Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP150\DP150_Single_Engineerig_Mornitoring_Mode.resx">
+      <DependentUpon>DP150_Single_Engineerig_Mornitoring_Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP173 and Elgin\DP173_Dual_Engineering_Mornitoring.resx">
+      <DependentUpon>DP173_Dual_Engineering_Mornitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP173 and Elgin\DP173_Model_Option_Form.resx">
+      <DependentUpon>DP173_Model_Option_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP173 and Elgin\DP173_Single_Engineering_Mornitoring.resx">
+      <DependentUpon>DP173_Single_Engineering_Mornitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP213\DP213_Dual_Engineering_Mornitoring.resx">
+      <DependentUpon>DP213_Dual_Engineering_Mornitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP213\DP213_Model_Option_Form.resx">
+      <DependentUpon>DP213_Model_Option_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP086 and DP116\Dual_Engineer_Monitoring_Mode.resx">
+      <DependentUpon>Dual_Engineer_Monitoring_Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement_Forms\Dual_SH_Delta_E.resx">
+      <DependentUpon>Dual_SH_Delta_E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP086 and DP116\Engineer_Mornitoring_Mode.resx">
+      <DependentUpon>Engineer_Mornitoring_Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP086 and DP116\First_Model_Option_Form.resx">
+      <DependentUpon>First_Model_Option_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meta\Meta_Engineer_Mornitoring_Mode.resx">
+      <DependentUpon>Meta_Engineer_Mornitoring_Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meta\Meta_Model_Option_Form.resx">
+      <DependentUpon>Meta_Model_Option_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUse\MIPI_CMD_Ctrl_Form.resx">
+      <DependentUpon>MIPI_CMD_Ctrl_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUse\Mipi_Script_Convertor.resx">
+      <DependentUpon>Mipi_Script_Convertor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement_QA\Optic_Measurement_Form.resx">
+      <DependentUpon>Optic_Measurement_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUse\OTP_Read_and_Compare.resx">
+      <DependentUpon>OTP_Read_and_Compare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUse\PNC_10ch_Board_Ctrl.resx">
+      <DependentUpon>PNC_10ch_Board_Ctrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practices\Practice_Coding.resx">
+      <DependentUpon>Practice_Coding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="DP150\Second_Model_Option_Form.resx">
+      <DependentUpon>Second_Model_Option_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement_Forms\SH_Delta_E.resx">
+      <DependentUpon>SH_Delta_E.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CA200SRVRLib">
+      <Guid>{81480671-9287-43D4-8A21-F0CB0157077F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

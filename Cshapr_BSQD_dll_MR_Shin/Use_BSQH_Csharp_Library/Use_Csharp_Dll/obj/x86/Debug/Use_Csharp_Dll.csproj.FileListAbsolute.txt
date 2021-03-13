@@ -1,0 +1,7 @@
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\bin\Debug\Use_Csharp_Dll.exe
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\bin\Debug\Use_Csharp_Dll.pdb
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\bin\Debug\BSQH_Csharp_Library.dll
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\bin\Debug\BSQH_Csharp_Library.pdb
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\obj\x86\Debug\Use_Csharp_Dll.csprojResolveAssemblyReference.cache
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\obj\x86\Debug\Use_Csharp_Dll.exe
+c:\users\lgd_vh\documents\visual studio 2010\Projects\Use_Csharp_Dll\Use_Csharp_Dll\obj\x86\Debug\Use_Csharp_Dll.pdb
